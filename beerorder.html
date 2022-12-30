@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+        
+           <div class="record">
+        <lightning-record-form
+                object-api-name={objectApiName}
+                columns="2"
+               fields={fields}
+                mode="edit"
+                onsubmit={handleSubmit}
+                 onsuccess={handleSuccess}
+        >
+        </lightning-record-form>
+
+
+    </div> 
+    </lightning-card>
+     
+
+    
+           
+       
+       
+
+</template>

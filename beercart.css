@@ -1,0 +1,24 @@
+.cartinfo{
+	color :black;
+	background-color:rgb(37, 190, 152);
+	width: 1500px;
+  height: 600px;
+  padding: 5px;
+  margin: 2px;
+}
+.cartinfo1{
+	color :black;
+	background-color:white;
+	width: 1000px;
+  height: 350px;
+  padding: 5px;
+  margin: 2px;
+}
+.cartinfo2{
+	color :black;
+	background-color:white;
+	width: 450px;
+  height: 50px;
+  padding: 5px;
+  margin: 2px;
+}

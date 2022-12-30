@@ -1,0 +1,63 @@
+<template> 
+    <div class="cartinfo">
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small" >
+            <Lightning-icon icon-name="utility:fulfillment_order" size="large" variant="success" ></Lightning-icon>
+            <span style="font-size:1.1rem;">Beer Exploer</span>
+            
+        </lightning-layout-item>
+    </lightning-layout>
+   <br><br>
+    <lightning-layout multiple-rows>
+         
+        <lightning-layout>
+                        <lightning-layout-item size="8" padding="around-small"  >
+                        <div class="cartinfo1">
+                            <div class="box">
+                        
+                            <div class="cartst" >
+                                    SHOPPING CART({ordercount}  ITEM)
+                            </div>
+    <table>
+                <tbody>
+                <tr>
+                    <th>BeerName</th>
+                    <th>Alcohol%</th>
+                    <th>breweryName</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+                <template for:each={getbeerlist.data} for:item="beer">
+                    <tr key={beer.Id}>
+                        <td>{beer.Name}</td>
+                        
+                        <td>{beer.Alcohol__c}</td>
+                        <td>{beer.brewery_Name__c}</td>
+                        <td>₹{beer.Price__c}</td>
+                        <td >
+                            <lightning-button-icon icon-name="utility:delete"   variant="brand"  value={beer.Id} onclick={dodelete} ></lightning-button-icon>
+                        </td>
+                    </tr>
+                </template>
+                </tbody>
+    </table> <br>
+     <lightning-button label="Go Back"  onclick={handelcontinue}></lightning-button>
+     <lightning-button variant="brand" label="Processed checkout"  onclick={handelprocess} ></lightning-button>
+                            </div>
+
+                        </div>    
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4" padding="around-small" >
+                            <div class="cartinfo2">
+                                <b>Subtotal({ordercount} item):</b>{sumammount} <br><br>
+   
+                <lightning-button label="Go Back"  onclick={handelcontinue}></lightning-button>
+                <lightning-button variant="brand" label="Processed checkout"  onclick={handelprocess} ></lightning-button>
+                <hr>
+                            <div  class="slds-align_absolute-center" >Frequently Purchased..</div>
+                            </div>
+                        </lightning-layout-item>
+        </lightning-layout>          
+    </lightning-layout>
+      </div> 
+</template>

@@ -1,0 +1,54 @@
+<template>
+    <div class="demo">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-small" >
+                <Lightning-icon icon-name="utility:fulfillment_order" size="large" variant="success" ></Lightning-icon>
+                <span style="font-size:1.1rem;">Beer Exploer</span>   
+            </lightning-layout-item>
+        </lightning-layout>
+
+ </div>
+
+
+
+
+ <lightning-card>
+    <lightning-input  label="Customer Name" onchange={customername}></lightning-input>
+    <lightning-input  label="Customer Email" onchange={handelemail}></lightning-input>
+    <lightning-input  label="Customer Phone" onchange={customerphone}></lightning-input>
+    <lightning-layout>
+    <lightning-layout-item padding="around-small" size="6">
+        <div class="header-column">
+            <b>Billing Address</b>
+            <lightning-input  label="Billing Street" onchange={billingstreet}></lightning-input>
+            <lightning-input  label="Billing City" onchange={billingcity}></lightning-input>
+            <lightning-input  label="Billing State" onchange={billingstate}></lightning-input>
+            <lightning-input  label="Billing Country" onchange={billingcountry}></lightning-input>
+            <lightning-input  label="Billing Postal Code" onchange={billingpostalcode}></lightning-input> 
+        </div>
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-small" size="6">
+        <div class="header-column">
+            <b>Shipping Address</b>
+             <lightning-input  label="Shipping Street" onchange={Shippingstreet}></lightning-input>
+            <lightning-input  label="Shipping City" onchange={Shippingcity}></lightning-input>
+            <lightning-input  label="Shipping State" onchange={Shippingstate}></lightning-input>
+            <lightning-input  label="Shipping Country" onchange={Shippingcountry}></lightning-input>
+            <lightning-input  label="Shipping Postal Code" onchange={Shippingpostalcode}></lightning-input>
+             
+        </div>
+    </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+    
+    
+    
+    <lightning-card  variant="Narrow"   >
+       <b>Subtotal({ordercount} item):</b>{sumammount} <br><br>
+    
+    <lightning-button variant="brand" label="Conform Order"  onclick={createorder}></lightning-button>
+    <lightning-button variant="Destructive" label="Cancel"  onclick={handleClick1}></lightning-button>
+    
+    </lightning-card>
+
+</template>

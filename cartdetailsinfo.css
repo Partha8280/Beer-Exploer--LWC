@@ -1,0 +1,32 @@
+.cartinfo{
+	color :black;
+	background-color:rgb(37, 190, 152);
+	width: 1500px;
+  height: auto;
+  padding: 5px;
+  margin: 2px;
+}
+.cartinfo1{
+	color :black;
+	background-color:white;
+	width: 1000px;
+  height: auto;
+  padding: 5px;
+  margin: 2px;
+}
+.cartinfo2{
+	color :black;
+	background-color:white;
+	width: 450px;
+  height: auto;
+  padding: 5px;
+  margin: 2px;
+}.dummy{
+	color : blue;
+}
+.cartst{
+	 padding: 5px;
+  margin: 2px;
+	font-size:1.1rem;
+	background-color:grey;
+}

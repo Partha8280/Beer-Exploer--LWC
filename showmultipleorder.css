@@ -1,0 +1,30 @@
+.demo{
+	background-color: #395547;
+	color: white;
+}
+.box{
+	background-color: yellow;
+	color: black;
+  width: 150px;
+  
+}
+.demo2{
+	background-color: white;
+	color:black;
+}
+.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+}
+
+.custom-box {
+    text-align: center;
+    background-color: #f4f6f9;
+    padding: 1rem;
+    border: 1px solid #d8dde6;
+}
+.box1{
+	 margin: 10px 0 20px 0;
+	padding: 1rem;
+	text-align: right;
+}

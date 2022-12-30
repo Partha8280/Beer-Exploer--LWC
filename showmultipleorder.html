@@ -1,0 +1,95 @@
+<template>
+    <div class="demo">
+                <lightning-layout multiple-rows>
+                    
+<Lightning-icon icon-name="utility:close" size="medium" variant="error" onclick={close}></Lightning-icon>
+
+                    <lightning-layout-item size="12" padding="around-small" >
+                        <span style="font-size:2.1rem;"  class="slds-align_absolute-center" >BEER EXPLOER</span>
+                        <hr>   
+                    </lightning-layout-item>
+                </lightning-layout>
+
+ <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved"></lightning-icon>
+ 
+         <template for:each={result} for:item="obj">
+        <p key={obj.Id}>Hi {obj.Customer_Name__c},</p>
+         </template>
+
+        <h1 style="font-size:2.1rem;">Thanks for your Order!</h1>
+        <div class="box">
+            <template for:each={result} for:item="obj">
+            <p key={obj.Id}>Order No:<b>{obj.Name}</b></p>
+            </template>
+        </div>   
+    
+    </div>
+
+
+<div class="demo2">
+<lightning-layout>
+    <lightning-layout-item padding="around-small" size="4">
+        <div class="header-column">
+            <b>Date</b>{date}
+            
+        </div>
+    </lightning-layout-item>
+
+    <lightning-layout-item padding="around-small" size="4">
+        <div class="header-column">
+            <b>Billing Address</b>
+            <template for:each={result} for:item="obj">
+            <p key={obj.Id}>{obj.Billing_Street__c} {obj.Billing_City__c},{obj.Billing_Postal_Code__c}</b></p>
+            </template>
+            
+        </div>
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-small" size="4">
+        <div class="header-column">
+            <b>Shiping Address</b>
+            <template for:each={result} for:item="obj">
+            <p key={obj.Id}>{obj.Shipping_Street__c} {obj.Shipping_City__c},{obj.Shipping_Postal_Code__c}</b></p>
+            </template>
+             
+        </div>
+    </lightning-layout-item>
+</lightning-layout>
+<br>
+<h1 style="font-size:1.1rem;">Order Summary</h1>
+ 
+ <div class="c-container">
+<lightning-layout horizontal-align="space">
+    <lightning-layout-item padding="around-small" size="4">
+        <div class="custom-box">Beer List</div>
+        <p>Beer</p>
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-small" size="4">
+        <div class="custom-box">Quantity</div>
+        <template for:each={result} for:item="obj">
+            <p key={obj.Id}><b>x{obj.Ordered_Quantity__c}</b></p>
+            </template>
+        
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-small" size="4">
+        <div class="custom-box">Subtotal</div>
+        <template for:each={result} for:item="obj">
+            <p key={obj.Id}><b>${obj.Order_Amount__c}</b></p>
+            </template>
+
+
+            
+    </lightning-layout-item>
+</lightning-layout>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</template>
